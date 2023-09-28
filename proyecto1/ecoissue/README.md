@@ -21,16 +21,16 @@ poetry add requests
 ```
 
 
-### Como ejecutar el programa
+# Como ejecutar el programa
 
-# Instalar el entorno para poder ejecutar el programa.
+## Instalar el entorno para poder ejecutar el programa.
 ```bash
 cd ecoissue
 poetry shell
 poetry install
 ```
 
-# Ejecutar el archivo principal del proyecto.
+## Ejecutar el archivo principal del proyecto.
 
 ```bash
 python3 ecoissue/main.py
