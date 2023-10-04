@@ -41,4 +41,4 @@ COPY ecoissue /src/
 
 WORKDIR /src
 
-#CMD ["uvicorn", "--factory", "ecoissue.main:app"]
+#CMD ["uvicorn", "--factory", "ecoissue.main:webapp"]
