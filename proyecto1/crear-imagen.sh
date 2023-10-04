@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t imagen_ejemplo:version -f docker/Dockerfile .
+docker build -t ecoissue_webapp:latest -f docker/Dockerfile .
