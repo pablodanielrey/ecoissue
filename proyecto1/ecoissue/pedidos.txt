@@ -1,1 +1,0 @@
-<_io.TextIOWrapper name='pedidos.txt' mode='a' encoding='UTF-8'>
