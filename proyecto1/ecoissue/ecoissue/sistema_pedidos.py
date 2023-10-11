@@ -3,11 +3,11 @@
 
 
 while True:
-    n_pedido = input("Ingrese el nº de pedido :")
+    n_pedido = input(str("Ingrese el nº de pedido :"))
     
     if n_pedido == 0:
         break
-else:
-    archivo = open('pedidos.txt' , 'a')
-    archivo.write(str(n_pedido))   
-    archivo.close()
+    else:
+        archivo = open('pedidos.txt' , 'a')
+        archivo.write(str(n_pedido))   
+        archivo.close()
