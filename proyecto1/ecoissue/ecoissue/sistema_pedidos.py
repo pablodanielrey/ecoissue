@@ -9,5 +9,6 @@ while True:
         break
     else:
         archivo = open('pedidos.txt' , 'a')
-        archivo.write(str(n_pedido))   
+        archivo.write(str(n_pedido))
+        archivo.write("\n")   
         archivo.close()
