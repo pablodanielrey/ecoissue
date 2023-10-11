@@ -5,7 +5,7 @@
 while True:
     n_pedido = input(str("Ingrese el nº de pedido :"))
     
-    if n_pedido == 0:
+    if n_pedido == '0':
         break
     else:
         archivo = open('pedidos.txt' , 'a')
