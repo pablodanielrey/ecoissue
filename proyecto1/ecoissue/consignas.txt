@@ -43,3 +43,21 @@
 # puede usar un diccionario para almacenar numero y fecha, y una lista para
 # almacenar esos diccionarios a medida que se van ingresando.
 
+
+# consigna 5:
+# modifique el programa para que ahora almacene los pedidos dentro del archivo 
+# en formato json.
+# ayuda:
+# https://docs.python.org/3/library/json.html
+# tenga en cuenta que los archivos almacenan strings, por lo que
+# es necesario convertir los datos que necesite almacenar a string.
+
+# consigna 6:
+# cree un nuevo programa para que lea los datos almacenados en consigna 5
+# e imprima solo el número de pedido de cada uno de ellos.
+# ayuda:
+# https://docs.python.org/3/library/json.html
+# debe tener ne cuenta que se leen strings de los archivos, por lo que
+# hace falta convertirlos a una estructura de datos adecuada para poder
+# manipularlos. 
+#
