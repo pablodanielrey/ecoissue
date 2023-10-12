@@ -1,19 +1,32 @@
 import datetime
 
-while True:
-    pedido = input("Ingrese el número de pedido: ")
+lista = []
 
-    if pedido == "0":
+while True:
+    pedido = {}
+
+    numero = input("Ingrese el número de pedido: ")
+
+    if numero == "0":
         break
     else:
-        cache = open("pedidos_juan.txt", "a")
-        cache.write("Pedido: ")
-        cache.write(str(pedido))
-        cache.write(" Hora: ")
-        cache.write(str(datetime.datetime.now()))
-        cache.write("\n")
-        cache.close()
+        print("Escribiendo el número:", numero)
+        # pedido = {"Numero":numero,"Hora":str(datetime.datetime.now())}
+        pedido["Numero"] = numero
+        pedido["Hora"] = str(datetime.datetime.now())
+        print(pedido)
+        lista.append(pedido)
 
-        print("Escribiendo el número:", pedido)
+print(lista)
+print("Almacenando datos en archivo...")
+
+for item in lista:
+    cache = open("pedidos_juan.txt", "a")
+    cache.write("Pedido: ")
+    cache.write(item.get("Numero"))
+    cache.write(" Hora: ")
+    cache.write(item.get("Hora"))
+    cache.write("\n")
+    cache.close()
 
 print("Cerrando Sistema...")
