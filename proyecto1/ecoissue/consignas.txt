@@ -1,0 +1,45 @@
+# consigna 1:
+# crea un programa que solicite numero de pedido. si este es = 0, fin.
+# else, almacenar los numeros de pedido en el archivo pedidos.txt
+#
+
+
+# consigna 2:
+# modifique su sistema para que, ademas de escribir en un archivo, ahora imprima
+# por pantalla cada número que se ingreso por teclado. y la leyenda:
+# Escribiendo el número : xxxx
+# adicionalmente el archivo de texto donde se encuentran los números escritos
+# debe tener no solo el número, si no que un texto "pedido".
+# ej:
+# pedido: 1
+# pedido: 45
+# pedido: 23
+# ....
+# Ayuda:
+# puede utilizar la sintaxis f de strings para incluír el valor de las
+# variables dentro del string a imprimir/escribir
+# ej:   f"Esto es un string con la variable {variable}"
+
+
+# consigna 3:
+# modifique el programa para que adicionalmente a escribir 
+# Número: x en el archivo, escriba la fecha y hora en la que se ingresó dicho
+# número.
+# Ej:
+# Número: 10, hora: .....
+# Ayuda:
+# para obtener la fecha y hora puede utilizar el módulo datetime de python:
+# https://docs.python.org/3/tutorial/stdlib.html#dates-and-times
+# https://docs.python.org/3/library/datetime.html
+# recuerde que debe convertir la fecha/hora a un string antes de escribirlo
+
+
+# consigna 4:
+# modifique el programa anterior para que en vez de escribir los números
+# a un archivo, ahora los vaya guardando en memoria en una variable.
+# y cuando el usuario ingrese 0 entonces antes de terminar el programa, 
+# escriba todo a un archivo.
+# ayuda:
+# puede usar un diccionario para almacenar numero y fecha, y una lista para
+# almacenar esos diccionarios a medida que se van ingresando.
+
