@@ -9,7 +9,7 @@ while True:
     if n_pedido == "0":
         break
     else:
-        archivo = open("pedidos.txt", "a")
+        archivo = open("/tmp/pedidos.txt", "a")
         archivo.write(str(n_pedido))
         archivo.write("\n")
         archivo.close()
