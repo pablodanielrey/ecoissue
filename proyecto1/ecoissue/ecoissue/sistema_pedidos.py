@@ -1,5 +1,7 @@
 
 #Archivo Maria Paz.
+from datetime import datetime
+fh = datetime.now()
 
 while True:
 
@@ -10,6 +12,6 @@ while True:
         break
     else:
         archivo = open("/tmp/pedidos.txt", "a")
-        archivo.write(str(f"Pedido {n_pedido}"))
+        archivo.write(str(f"Pedido {n_pedido} fecha y hora {fh}"))
         archivo.write("\n")
         archivo.close()
