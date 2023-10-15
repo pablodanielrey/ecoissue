@@ -13,3 +13,5 @@ while True:
         archivo.write(str(f"Pedido {n_pedido}"))
         archivo.write("\n")
         archivo.close()
+
+#prueba de codigo
