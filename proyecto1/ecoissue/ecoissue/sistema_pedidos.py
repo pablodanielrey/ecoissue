@@ -1,11 +1,12 @@
 
 #Archivo Maria Paz.
 from datetime import datetime
-fh = datetime.now()
+
 
 while True:
-
+    
     n_pedido = input(str("Ingrese el nº de pedido :"))
+    fh = datetime.now()
     print("Escribiendo el numero: ", n_pedido)
 
     if n_pedido == "0":
