@@ -14,10 +14,15 @@ while True:
     print("Escribiendo el numero: ", almacenamiento["numero"])
 
     if almacenamiento["numero"] == "0":
-
         break
     else:
-        archivo = open("/tmp/pedidos.txt", "a")
-        archivo.write(str(f"Pedido {almacenamiento['numero']} fecha y hora {almacenamiento['fecha']}"))
-        archivo.write("\n")
-        archivo.close()
+        lista = []
+        lista.append(almacenamiento)
+        
+
+archivo = open("/tmp/pedidos.txt", "a")
+for elemento in lista:
+    texto = str(f"Pedido {elemento['numero']} fecha y hora {elemento['fecha']}")
+    archivo.write(texto)
+    archivo.write("\n")
+archivo.close()
