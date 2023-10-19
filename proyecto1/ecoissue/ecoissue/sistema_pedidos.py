@@ -21,8 +21,7 @@ while True:
         
 archivo = open("/tmp/pedidos.txt", "w")
 for elemento in lista:
-    texto = str(f"Pedido {elemento['numero']} fecha y hora {elemento['fecha']}")
-
-    archivo.write(json.dumps(texto))
+    #texto = str(f"Pedido {elemento['numero']} fecha y hora {elemento['fecha']}")#puedo sacarlo a este 
+    archivo.write(json.dumps(lista))
     archivo.write("\n")
 archivo.close()
