@@ -1,13 +1,2 @@
-11
-11
-22
-11231
-0
-0
-0
-12.2
-clear
-& C:/Users/lucas/AppData/Local/Microsoft/WindowsApps/python3.11.exe c:/Users/lucas/OneDrive/Desktop/Dev/ecoissue/proyecto1/ecoissue/ecoissue/lucas/Pedidos1.py
-123
-0
-0
+1561
+1561

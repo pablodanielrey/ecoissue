@@ -1,8 +1,6 @@
 # Consigna 1 de Lucas
 
-
 pedidos = open( "pedidos.txt", "w")
-
 
 with pedidos as archivo:
     while True:
@@ -11,4 +9,5 @@ with pedidos as archivo:
                 print ("Ingreso el número 0, se guardaron los número de pedidos en pedidos.txt")
                 print ("Programa terminado.")
                 break
-            archivo.write(f"{n_pedidos}\n")
+            else:
+                archivo.write(f"{n_pedidos}\n")
