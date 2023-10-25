@@ -1,5 +1,5 @@
 # Consigna 3 de Lucas
-
+import datetime
 pedidos = open( "pedidos.txt", "w")
 
 with pedidos as archivo:
@@ -10,5 +10,7 @@ with pedidos as archivo:
                 print ("Programa terminado.")
                 break
             else:
-                archivo.write(f"Pedido: {n_pedidos} Hora: Fecha:\n")
+                fecha = datetime.date.today()
+                hora = datetime.datetime.now()
+                archivo.write(f"Pedido: {n_pedidos} Hora:{hora.strftime('%H:%M')} Fecha:{fecha.strftime('%Y-%m-%d')}\n")
                 print("Escribiendo el número: ", n_pedidos)
