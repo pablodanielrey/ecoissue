@@ -1,9 +1,12 @@
 import json
+
 with open("/tmp/pedidos.txt") as archivo:
-    contenido = archivo.read()
-    print(contenido)
-    datos = json.loads(contenido)
+        linea = archivo.readline()
+        
+        for dato in linea:
+            dato = json.loads(linea) 
+             
+            print(dato["numero"])
 
-    for n in datos:
-        print(n["numero"])
-
+#corregir el for para que itere en cada linea del archivo. de las dos pruebas solo toma el primero o el segundo 
+#movi la variable. 
