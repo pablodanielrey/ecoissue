@@ -3,7 +3,10 @@ from datetime import datetime
 import json
 
 lista = []
+inicio = datetime.now()
+print(inicio)
 while True:
+
     n_pedido = input(str("Ingrese el nº de pedido :"))
     fh = str(datetime.now())
     almacenamiento ={
@@ -19,9 +22,10 @@ while True:
        
         lista.append(almacenamiento)
         
-archivo = open("/tmp/pedidos.txt", "w")
+archivo = open("/tmp/pedidos.json", "w")
 for elemento in lista:
-    #texto = str(f"Pedido {elemento['numero']} fecha y hora {elemento['fecha']}")#puedo sacarlo a este 
-    archivo.write(json.dumps(elemento))
+    archivo.write(json.dumps(elemento)) #texto = str(f"Pedido {elemento['numero']} fecha y hora {elemento['fecha']}")
     archivo.write("\n")
 archivo.close()
+fin = datetime.now()
+print(fin)
