@@ -1,7 +1,9 @@
 import json
 
 with open("pedidos.json", "r") as archivo:
-    lista = json.load(archivo)
+    listado = json.load(archivo)
 
-for item in lista:
-    print("Pedido: " + item.get("Numero"))
+    print ("Carga de pedidos: " + listado.get("inicio"))
+    
+    for item in listado.get("pedidos"):
+        print("Pedido: " + item.get("Numero"))
