@@ -3,7 +3,7 @@ from datetime import datetime
 import json
 
 lista = []
-inicio = datetime.now()
+inicio = datetime.now()#iniciar
 print(inicio)
 while True:
 
