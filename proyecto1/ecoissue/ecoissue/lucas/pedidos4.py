@@ -30,6 +30,5 @@ with open( "pedidos.txt", "w") as archivo:
                 pedidos_final.append(pedidos)                                    
                 archivo.write(f"Pedido: {n_pedidos} Hora:{hora.strftime('%H:%M')} Fecha:{fecha.strftime('%d-%m-%Y')}\n")
                 print("Escribiendo el número: ", n_pedidos)
-                print(pedidos)
 
 
