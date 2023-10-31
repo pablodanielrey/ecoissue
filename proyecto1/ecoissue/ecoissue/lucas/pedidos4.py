@@ -14,18 +14,21 @@ pedidos_final=[]  #Lista
 
 with open( "pedidos.txt", "w") as archivo:
     while True:
-            n_pedidos = input("Ingrese número de pedido (0 termina el programa): ")
-            ########### Diccionario #########
-            pedidos ={
-                    "número" : n_pedidos,
-                    "fecha" : fecha.strftime('%d-%m-%Y'),
-                    "hora" : hora.strftime('%H:%M'),
-                }
-            ########### Diccionario #########
-            if n_pedidos == str(0):
-                print ("Ingreso el número 0, se guardaron los número de pedidos en pedidos.txt")                    
-                print ("Programa terminado.")
-                break
+            try:
+                n_pedidos = int(input("Ingrese número de pedido (0 termina el programa): "))
+                ########### Diccionario #########
+                pedidos ={
+                        "número" : n_pedidos,
+                        "fecha" : fecha.strftime('%d-%m-%Y'),
+                        "hora" : hora.strftime('%H:%M'),
+                    }
+                ########### Diccionario #########
+                if n_pedidos == 0:
+                    print ("Ingreso el número 0, se guardaron los número de pedidos en pedidos.txt")                    
+                    print ("Programa terminado.")
+                    break
+            except:
+                 print("No es un número de pedido válido. Por favor ingrese uno válido.")
             else:
                 pedidos_final.append(pedidos)                                    
                 archivo.write(f"Pedido: {n_pedidos} Hora:{hora.strftime('%H:%M')} Fecha:{fecha.strftime('%d-%m-%Y')}\n")

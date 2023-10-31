@@ -17,11 +17,14 @@ pedidos_final=[]  #Lista
 
 with open( "pedidos.json", "a") as archivo:
     while True:
-        n_pedidos = input("Ingrese número de pedido(0 para terminar el programa): ")
-        if n_pedidos == str(0):
-            print ("Ingreso el número 0, se guardaron los número de pedidos en pedidos.json")                    
-            print ("Programa terminado.")
-            break
+        try:
+            n_pedidos = int(input("Ingrese número de pedido(0 para terminar el programa): "))
+            if n_pedidos == 0:
+                print ("Ingreso el número 0, se guardaron los número de pedidos en pedidos.json")                    
+                print ("Programa terminado.")
+                break
+        except:
+            print("No es un número de pedido válido. Por favor ingrese uno válido.")
         else:
              ####### Diccionario #######
             pedidos = {
