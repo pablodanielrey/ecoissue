@@ -19,7 +19,7 @@ while True:
     else:
        lista.append(almacenamiento)
         
-archivo = open("/tmp/pedidos.json", "w")
+archivo = open("/tmp/pedidos.txt", "w")
 archivo.write(inicio)#fh_inicio = { "inicio": inicio}
 archivo.write("\n")
 for elemento in lista:
