@@ -6,3 +6,5 @@ with open("/tmp/pedidos.json") as archivo:
             dato = json.loads(linea) 
              
             print("El pedido es: ", dato["numero"])
+#imprimir cuando se cargo el pedido o cuando se inicio el programa?
+#revisar si el formato esta correcto
