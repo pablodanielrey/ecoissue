@@ -24,7 +24,8 @@ while True:
         lista.append(pedido)
 
 #print(lista)
-listado = {"inicio":inicio, "pedidos":lista}
+fin = str(datetime.datetime.now())
+listado = {"inicio":inicio, "fin":fin, "pedidos":lista}
 #print(listado)
 print("Almacenando datos en archivo...")
 
