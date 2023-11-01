@@ -20,11 +20,12 @@ while True:
        lista.append(almacenamiento)
         
 archivo = open("/tmp/pedidos.txt", "w")
-archivo.write(inicio)#fh_inicio = { "inicio": inicio}
-archivo.write("\n")
+#archivo.write(inicio)#fh_inicio = { "inicio": inicio}
+#archivo.write("\n")
 for elemento in lista:
-    archivo.write(json.dumps(elemento)) #texto = str(f"Pedido {elemento['numero']} fecha y hora {elemento['fecha']}")
+    archivo.write(json.dumps(elemento))
     archivo.write("\n")
 archivo.close()
 
-
+#archivo_json = open("/tmp/pedidos_2.json", "w")
+#json.dump()
