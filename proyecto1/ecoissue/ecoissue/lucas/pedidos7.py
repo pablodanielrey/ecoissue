@@ -43,15 +43,5 @@ with open( "pedidos.json", "a") as archivo:
         info_ejecucion_json["pedidos_final"].append(pedidos)
 with open ("pedidos.json", "w") as archivo_json:
     json.dump(info_ejecucion_json, archivo_json, indent=4)
-    print("Escribiendo los pedidos en el archivo JSON")
-    print("Fecha de ejecución: " , info_ejecucion_json["Fecha de ejecución: "])
-    print("Hora de ejecución: " , info_ejecucion_json["Hora de ejecución: "],"\n")
-
-
-
-with open ("pedidos.json", "r") as archivo_json:
-    info_ejecucion_json = json.load (archivo_json)
-for pedidos in info_ejecucion_json["pedidos_final"]:
-    n_pedidos = pedidos.get("número: ", "Fecha: ")
-    print("Número de pedido: ",n_pedidos, "Fecha: ", fecha, "Hora: ", hora)
-print("Estos son todos los pedidos guardados")
+    print("Escribiendo los pedidos en el archivo JSON","\n")
+archivo_json.close
