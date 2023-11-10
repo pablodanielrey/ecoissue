@@ -1,6 +1,7 @@
 import paramiko
 import getpass
 import ping3
+import socket
 
 
 def respond(hostname):
@@ -14,6 +15,10 @@ def verifySsh(hostname, username, password, port):
         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         ssh_client.connect ( hostname, port, username, password, timeout=5)
         print("La conexión ssh esta habilitada.")
+        # Ejecuta el comando 'hostname' dentro de la sesión SSH
+        _, stdout, _ = ssh_client.exec_command('hostname')
+        remote_hostname = stdout.read().decode().strip()
+        print(f"Nombre del equipo remoto (a través de SSH): {remote_hostname}")
     except paramiko.AuthenticationException:
         print("Error de Autenticación. Verifique las credenciales SSH.")
     except paramiko.SSHException as e:

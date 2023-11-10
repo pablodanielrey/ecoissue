@@ -29,17 +29,17 @@ def verifySsh(hostname, username, password, port):
         print(f"Error de conexión SSH: {e}")
     except Exception as e:
         print(f"Error desconocido: {e}")
-        return False
-  
+    return False
 
-    ####solicita los datos de Conexión SSH #########
+
+####solicita los datos de Conexión SSH #########
 hostname = input("Ingrese la ip o host del equipo a conectar por ssh: ")
 username = str("soporte")
 password = getpass.getpass("Ingrese contraseña de soporte: ")
 port = 22
 
 
-if verifySsh is True:
+if verifySsh(hostname, username, password, port) is True:
     with paramiko.SSHClient() as ssh_client:
         ####solicita los datos para resetear la contraseña #########
         user = input("Ingrese el usuario al que le quiere cambiar la contraseña: ")
@@ -58,8 +58,9 @@ if verifySsh is True:
                 archivo.close()
         else:
             print(f"No se pudo cambiar la contraseña de {user}.")
+        ######### Cierra la conexión SSH #########
+        ssh_client.close()
                   
-# Cierra la conexión SSH
-ssh_client.close()
+
 
 
